@@ -1,0 +1,11 @@
+1)select the k value
+2)we calculate the distance of the nearest neighbors
+3)then check whether the category belongs to category1 or category 2
+4)if the category 1 neighbor value is more then the category2 means the query point belongs to category1
+
+
+How model is ready
+-------------------------
+We calculate the distance using 
+1)Eucledian
+2)Manhatten distance

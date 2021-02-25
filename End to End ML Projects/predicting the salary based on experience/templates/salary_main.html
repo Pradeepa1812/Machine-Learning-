@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Predicting the salary</title>
+<style>
+body{
+  background:-webkit-linear-gradient(orange,pink)
+}
+h1{
+  color:purple;
+}
+
+</style>
+</head>
+<body>
+<h1><u>Predicting the Salary based on Experience</u></h1>
+<form action="{{url_for('predict')}}" method="post">
+  <h4>Experience:</h4><input type="text" name="Experience"  placeholder="3">
+  <button>predict</button>
+  
+  <br><br>
+  <h3> {{predict_value}}</h3>
+</form>
+</body>
+</html>
+

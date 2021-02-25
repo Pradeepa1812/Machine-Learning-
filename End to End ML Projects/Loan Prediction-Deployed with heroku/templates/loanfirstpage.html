@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Loan Prediction</title>
+<style>
+.body{
+ background:-webkit-linear-gradient(black,#515459,#353638,black);
+}
+
+h1{
+color:#ede482
+}
+
+h2{
+color:#b8e9f2
+}
+
+div {
+  width: 600px;
+  padding: 15px;
+  margin: 0 auto
+}
+
+.button {
+  background-color:#edb47e;
+  border: none;
+  color: black;
+  padding: 5px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+label{
+color:white;
+width:180px;
+}
+input,label{
+float:left;
+}
+</style>
+</head>
+<body  class="body">
+<center><h1>Loan Prediction </h1></center><div>
+
+<form action="{{url_for('predict')}}" method="POST">
+<label>Gender </label>:
+           <select class="button" name="gender" required="required">
+           <option>Male</option>
+           <option>Female</option>
+           </select><br><br>
+
+<label>Married</label>:
+           <select class="button" name="married" >
+           <option>Yes</option>
+           <option>No</option>
+           </select><br><br>
+
+<label>Education</label>:
+          <select class="button" name="education" >
+          <option>Graduate</option>
+          <option>Not Graduate</option>          
+          </select><br><br>
+<label>Property_Area</label>:
+        <select class="button" name="propertyarea">
+        <option>Semiurban</option>
+        <option>Rural</option>
+        <option>Urban</option>
+        </select><br><br>
+        
+<label>Applicant Income</label>:<input type="text" class="button" name="applicationincome" size=30 placeholder="4547"><br><br><br>
+
+<label>Coapplicant Income</label>:<input type="text" class="button" name="coapplicantincome" size=30 placeholder="1668"><br><br><br>
+
+<label>Loan Amount</label>:<input type="text" class="button" name="loanamount" size=30 placeholder="290"><br><br><br>
+
+<label>Loan_Amount_Term	</label>:<input type="text" class="button" name="loanamountterm" size=30 placeholder="360"><br><br><br>
+
+<label>Credit History</label>:<input type="text" class="button" name="credithistory" size=30 placeholder="1"><br><br><br>
+
+<input type="submit" value="Predict">
+
+</form><div>
+<h2><center>{{ans}}</center></h2>
+</body>
+</html>

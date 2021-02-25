@@ -1,0 +1,65 @@
+<html>
+</head>
+<title>Mushroom prediction</title>
+<style>
+.body{
+ background:-webkit-linear-gradient(black,#515459,#353638,black);   
+}
+h1{
+color:#ede482
+}
+h2{
+color:#b8e9f2
+}
+div {
+  width: 800px;
+  padding: 15px;
+  margin: 10px;
+ }
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 5px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+.buttons {
+  background-color:#aab863;
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="body">
+<h1 ><center>Mushroom Classification</center></h1>
+<center><div>
+ <form action="{{ url_for('predict') }}" method="POST">
+ <input class="button" type="text" name="gill-color" size=40 placeholder="gill-color"><br><br>
+  <input class="button" type="text" name="ring-type" size=40 placeholder="ring-type"><br><br>
+ <input class="button" type="text" name="gill-size" size=40 placeholder="gill-size"><br><br>
+ <input class="button" type="text" name="bruises" size=40 placeholder="bruises"><br><br>
+ <input class="button" type="text" name="stalk-root" size=40 placeholder="stalk-root"><br><br>
+ <input class="button" type="text" name="gill-spacing" size=40 placeholder="gill-spacing"><br><br>
+ <input class="button" type="text" name="habitat" size=40 placeholder="habitat"><br><br>
+ <input class="button" type="text" name="spore-print-color" size=40 placeholder="spore-print-color"><br><br>
+ <input class="button" type="text" name="population" size=40 placeholder="population"><br><br>
+<input  type="submit" class="buttons" value="Predict">
+ </form>
+ 
+<h2>{{ans}}<h2>
+<div></center>
+</body>
+</html> 
